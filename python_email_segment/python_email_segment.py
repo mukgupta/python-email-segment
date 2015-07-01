@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 import sys
 import re
+import os
 
-FREE_PROVIDERS_LIST_FILE = "../store/free.txt"
-DISPOSABLE_PROVIDERS_LIST_FILE = "../store/disposable.txt"
+module_dir = os.path.dirname(__file__)  # get current directory
+
+FREE_PROVIDERS_LIST_FILE = os.path.join(module_dir, "db/free.txt")
+DISPOSABLE_PROVIDERS_LIST_FILE = os.path.join(module_dir, "db/disposable.txt")
 
 free_list = open(FREE_PROVIDERS_LIST_FILE).read().splitlines()
 disposable_list = open(DISPOSABLE_PROVIDERS_LIST_FILE).read().splitlines()
